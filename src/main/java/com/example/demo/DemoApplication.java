@@ -20,7 +20,17 @@ public class DemoApplication {
     public int substract(int firstNumber ,int secondNumber){
         return firstNumber - secondNumber;
     }
+     public int multiply(int firstNumber ,int secondNumber){
+        return firstNumber * secondNumber;
+    }
 
+    public int substract(int firstNumber ,int secondNumber){
+        return firstNumber - secondNumber;
+    }
+
+
+
+  
     @RequestMapping("/")
   public String home() {
     return "Hello World!";
