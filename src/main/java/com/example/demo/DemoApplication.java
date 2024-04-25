@@ -27,6 +27,9 @@ public class DemoApplication {
     public int substract(int firstNumber ,int secondNumber){
         return firstNumber - secondNumber;
     }
+    public int haha(int firstNumber ,int secondNumber){
+        return firstNumber - secondNumber;
+    }
 
 
 
