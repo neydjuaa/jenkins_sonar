@@ -20,11 +20,11 @@ public class DemoApplication {
     public int substract(int firstNumber ,int secondNumber){
         return firstNumber - secondNumber;
     }
-     public int multiply(int firstNumber ,int secondNumber){
+     public int multiply6(int firstNumber ,int secondNumber){
         return firstNumber * secondNumber;
     }
 
-    public int substract(int firstNumber ,int secondNumber){
+    public int substract5(int firstNumber ,int secondNumber){
         return firstNumber - secondNumber;
     }
     public int haha(int firstNumber ,int secondNumber){
