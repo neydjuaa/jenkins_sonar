@@ -7,27 +7,14 @@ pipeline {
 
 
     stages {
-
         
-        stage('Build and test'){
-            steps{
-                sh 'mvn -B clean package'
-            }
-        }
-
-        stage('Artifact') {
-            steps {
-                archiveArtifacts artifacts: 'target/*.jar'
-            }
-        }
-        stage('SonarQube Analysis'){
+        stage('Scan'){
             steps {
                 withSonarQubeEnv('mysonar') {
-                 sh 'mvn sonar:sonar'
+                    sh 'mvn clean org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar'
                 }
             }
         }
-
         stage('Quality gate'){
             steps {
                 waitForQualityGate abortPipeline: true
