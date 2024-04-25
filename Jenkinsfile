@@ -17,7 +17,7 @@ pipeline {
 
         stage('Artifact') {
             steps {
-                archiveArtifacts artifacts: "target/*.jar", onlyIfSuccessful: yes
+                archiveArtifacts artifacts: "./target/*.jar", onlyIfSuccessful: yes
             }
         }
         stage('SonarQube Analysis'){
@@ -29,3 +29,4 @@ pipeline {
         }
     }
 }
+
